@@ -1,6 +1,6 @@
-package com.disciplina.backend.repositories;
+package com.disciplina.backend.secretaria.repositories;
 
-import com.disciplina.backend.models.Aluno;
+import com.disciplina.backend.secretaria.models.Aluno;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

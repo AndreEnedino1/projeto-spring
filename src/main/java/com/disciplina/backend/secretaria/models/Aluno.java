@@ -1,4 +1,4 @@
-package com.disciplina.backend.models;
+package com.disciplina.backend.secretaria.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

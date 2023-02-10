@@ -1,7 +1,7 @@
-package com.disciplina.backend.controllers;
+package com.disciplina.backend.secretaria.controllers;
 
-import com.disciplina.backend.models.Aluno;
-import com.disciplina.backend.service.AlunoService;
+import com.disciplina.backend.secretaria.models.Aluno;
+import com.disciplina.backend.secretaria.service.AlunoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,7 +25,8 @@ public class AlunoController {
 
         Aluno alunoCreated = service.create(aluno);
 
-        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(alunoCreated.getId()).toUri();
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").
+                buildAndExpand(alunoCreated.getId()).toUri();
 
         return ResponseEntity.created(uri).body(alunoCreated);
 
