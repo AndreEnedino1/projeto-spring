@@ -1,5 +1,5 @@
 <br>
-{{formAluno.value | json}}
+<p>{{isEdit() ? "Edição" : "Cadastro"}}</p>
 <form [formGroup]="formAluno" (ngSubmit)="enviar()">
   <div class="mb-3">
     <label for="nome" class="form-label">Nome</label>
@@ -13,5 +13,5 @@
     <label for="curso" class="form-label">Curso</label>
     <input type="text" id="curso" class="form-control" formControlName="curso">
   </div>
-  <button [disabled]="!formAluno.valid" type="submit" class="btn btn-dark">Cadastrar</button>
+  <button [disabled]="!formAluno.valid" type="submit" class="btn btn-dark">Enviar</button>
 </form>

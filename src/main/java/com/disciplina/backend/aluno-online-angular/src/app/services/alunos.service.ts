@@ -15,11 +15,18 @@ export class AlunosService {
     return this.http.get<IAluno[]>(`${this.api}/${this.endpoint}/all/`);
   }
 
-  criar(aluno:IAluno){
+  criarEditar(aluno:IAluno){
+    if(aluno.id){
+      return this.http.put(`${this.api}/${this.endpoint}/${aluno.id}`, aluno)
+    }
     return this.http.post(`${this.api}/${this.endpoint}/`, aluno);
   }
 
   remover(id:number){
     return this.http.delete(`${this.api}/${this.endpoint}/${id}`);
+  }
+
+  buscarPorId(id:number){
+    return this.http.get<IAluno>(`${this.api}/${this.endpoint}/${id}`);
   }
 }

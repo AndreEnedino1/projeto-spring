@@ -20,7 +20,7 @@
       <td>{{aluno.nome}}</td>
       <td>{{aluno.email}}</td>
       <td>{{aluno.curso}}</td>
-      <td><a type="button" class="btn btn-success"><span class="material-icons">
+      <td><a type="button" class="btn btn-success" [routerLink]="['editar/', aluno.id]"><span class="material-icons">
         create
         </span>
       </a></td>

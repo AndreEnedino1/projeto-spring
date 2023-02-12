@@ -10,6 +10,7 @@ import { ProfessoresComponent } from './pages/professores/professores.component'
 const routes: Routes = [
   {path:'alunos', component: AlunosComponent},
   {path:'alunos/cadastrar', component: AlunosCadastrarEditarComponent},
+  {path:'alunos/editar/:id', component: AlunosCadastrarEditarComponent},
   {path:'disciplinas', component: DisciplinasComponent},
   {path: 'disciplinas/cadastrar', component: DisciplinasCadastrarEditarComponent},
   {path:'professores', component: ProfessoresComponent},
