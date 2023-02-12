@@ -29,6 +29,14 @@ public class AlunoService {
         return repository.findById(id);
     }
 
+    public Aluno edit(Aluno aluno, Long id){
+        Optional<Aluno> alunoToUpdate = repository.findById(id);
+        alunoToUpdate.ifPresent(alunoBanco -> alunoBanco.setNome(aluno.getNome()));
+        alunoToUpdate.ifPresent(alunoBanco -> alunoBanco.setCurso(aluno.getCurso()));
+        alunoToUpdate.ifPresent(alunoBanco -> alunoBanco.setEmail(aluno.getEmail()));
+        return repository.save(alunoToUpdate.get());
+    }
+
     public void delete(Long id){
 
         repository.deleteById(id);

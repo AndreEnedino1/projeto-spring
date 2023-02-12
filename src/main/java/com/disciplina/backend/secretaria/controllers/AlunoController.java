@@ -52,4 +52,10 @@ public class AlunoController {
 
         service.delete(id);
     }
+
+    @PutMapping("/editar/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public void edit(@RequestBody Aluno aluno, @PathVariable Long id){
+        service.edit(aluno,id);
+    }
 }

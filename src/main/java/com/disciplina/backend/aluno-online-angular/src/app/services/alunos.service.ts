@@ -17,7 +17,7 @@ export class AlunosService {
 
   criarEditar(aluno:IAluno){
     if(aluno.id){
-      return this.http.put(`${this.api}/${this.endpoint}/${aluno.id}`, aluno)
+      return this.http.put(`${this.api}/${this.endpoint}/editar/${aluno.id}`, aluno)
     }
     return this.http.post(`${this.api}/${this.endpoint}/`, aluno);
   }
