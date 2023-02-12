@@ -45,4 +45,11 @@ public class ProfessorController {
         service.delete(id);
     }
 
+    @PutMapping("/editar/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public void editar(@RequestBody Professor professor, @PathVariable Long id){
+
+        service.edit(professor, id);
+    }
+
 }

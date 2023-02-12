@@ -18,7 +18,7 @@
       <th scope="row">{{professor.id}}</th>
       <td>{{professor.nome}}</td>
       <td>{{professor.email}}</td>
-      <td><a type="button" class="btn btn-success"><span class="material-icons">
+      <td><a type="button" class="btn btn-success" [routerLink]="['editar/', professor.id]"><span class="material-icons">
         create
         </span>
       </a></td>

@@ -15,11 +15,20 @@ export class ProfessoresService {
     return this.http.get<IProfessor[]>(`${this.api}/${this.endpoint}/all/`);
   }
 
-  criar(professor: IProfessor){
+  buscarPorId(id:number){
+    return this.http.get<IProfessor>(`${this.api}/${this.endpoint}/${id}`);
+  }
+
+  criarEditar(professor: IProfessor){
+    if(professor.id){
+      return this.http.put(`${this.api}/${this.endpoint}/editar/${professor.id}`, professor)
+    }
     return this.http.post(`${this.api}/${this.endpoint}/`, professor);
   }
 
   removerProfessor(id:number){
     return this.http.delete(`${this.api}/${this.endpoint}/delete/${id}`);
   }
+
+
 }

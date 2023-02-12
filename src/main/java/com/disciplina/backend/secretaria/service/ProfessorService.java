@@ -27,6 +27,14 @@ public class ProfessorService {
         return repository.findById(id);
     }
 
+    public void edit(Professor professor, Long id){
+        Optional<Professor> professorToUpdate = repository.findById(id);
+        professorToUpdate.ifPresent(professorBanco -> professorBanco.setNome(professor.getNome()));
+        professorToUpdate.ifPresent(professorBanco -> professorBanco.setEmail(professor.getEmail()));
+
+        repository.save(professorToUpdate.get());
+    }
+
     public void delete(Long id){
         repository.deleteById(id);
     }
