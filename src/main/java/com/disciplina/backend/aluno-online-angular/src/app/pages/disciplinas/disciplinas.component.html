@@ -1,1 +1,32 @@
-<p>disciplinas</p>
+<br>
+<div class="container">
+<a class="btn btn-dark" routerLink="cadastrar"><i class="material-icons">add</i></a>
+<br>
+<br>
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Professor</th>
+      <th>Editar</th>
+      <th>Remover</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let disciplina of disciplinas" class="table-active">
+      <th scope="row">{{disciplina.id}}</th>
+      <td>{{disciplina.nome}}</td>
+      <td>{{disciplina.professor?.nome}}</td>
+      <td><a type="button" class="btn btn-success" [routerLink]="['editar/', disciplina.id]"><span class="material-icons">
+        create
+        </span>
+      </a></td>
+
+      <td><a type="button" class="btn btn-danger" (click)="remover(disciplina)"><span class="material-icons">
+        delete
+      </span></a></td>
+    </tr>
+  </tbody>
+</table>
+</div>

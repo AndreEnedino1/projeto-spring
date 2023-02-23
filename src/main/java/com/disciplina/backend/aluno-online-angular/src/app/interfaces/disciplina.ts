@@ -1,7 +1,7 @@
 import { IProfessor } from "./professor";
 
 export interface IDisciplina {
-  id:number;
+  id?:number;
   nome: string;
-  professor: IProfessor;
+  professor?: IProfessor;
 }

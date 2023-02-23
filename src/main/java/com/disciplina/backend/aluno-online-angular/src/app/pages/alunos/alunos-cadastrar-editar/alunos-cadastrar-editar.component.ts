@@ -46,7 +46,7 @@ export class AlunosCadastrarEditarComponent implements OnInit {
     return new FormGroup({
       id: new FormControl(aluno.id ? aluno.id : null),
       nome: new FormControl(aluno.nome, Validators.required),
-      email: new FormControl(aluno.email, [Validators.required, Validators.required]),
+      email: new FormControl(aluno.email, [Validators.required, Validators.email]),
       curso: new FormControl(aluno.curso, Validators.required)
     })
 

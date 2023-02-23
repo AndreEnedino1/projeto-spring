@@ -28,7 +28,7 @@ export class ProfessoresComponent implements OnInit {
 
     Swal.fire({
       title: 'Deseja realmente remover?',
-      text: "Aluno será removido dos registros",
+      text: "O professor será removido dos registros",
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
@@ -40,7 +40,7 @@ export class ProfessoresComponent implements OnInit {
         this.professorService.removerProfessor(id).subscribe(result =>{
           Swal.fire(
             'Removido!',
-            'Aluno removido com sucesso.',
+            'Professor removido com sucesso.',
             'success'
           );
           this.listarTodos();

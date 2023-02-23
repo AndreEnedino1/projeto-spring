@@ -13,6 +13,7 @@ const routes: Routes = [
   {path:'alunos/editar/:id', component: AlunosCadastrarEditarComponent},
   {path:'disciplinas', component: DisciplinasComponent},
   {path: 'disciplinas/cadastrar', component: DisciplinasCadastrarEditarComponent},
+  {path: 'disciplinas/editar/:id', component: DisciplinasCadastrarEditarComponent},
   {path:'professores', component: ProfessoresComponent},
   {path: 'professores/cadastrar', component: ProfessoresCadastrarEditarComponent},
   {path: 'professores/editar/:id', component: ProfessoresCadastrarEditarComponent}

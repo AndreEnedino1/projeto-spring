@@ -3,6 +3,7 @@ package com.disciplina.backend.secretaria.models;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
@@ -20,8 +21,8 @@ public class Disciplina {
 
     private String nome;
 
-    @ManyToOne(cascade = CascadeType.REMOVE)
-    @JoinColumn(name="professor_id")
+    @ManyToOne(cascade = CascadeType.DETACH)
+    @JoinColumn(name="professor_id", nullable = true)
     private Professor professor;
 
 }

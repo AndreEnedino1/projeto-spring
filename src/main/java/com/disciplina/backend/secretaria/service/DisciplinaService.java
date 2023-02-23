@@ -30,6 +30,8 @@ public class DisciplinaService {
         return repository.findById(id);
     }
 
+
+
     public void delete(Long id){
         repository.deleteById(id);
     }

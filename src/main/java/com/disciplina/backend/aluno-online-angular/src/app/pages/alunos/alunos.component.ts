@@ -20,7 +20,6 @@ export class AlunosComponent implements OnInit {
   listarTodos(){
     this.alunosService.listarAlunos().subscribe((result: IAluno[]) => {
       this.alunos = result;
-      console.log(this.alunos);
     });
   }
 
