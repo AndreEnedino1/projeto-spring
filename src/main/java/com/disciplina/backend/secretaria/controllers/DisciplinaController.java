@@ -44,4 +44,12 @@ public class DisciplinaController {
     public void delete(@PathVariable Long id){
         service.delete(id);
     }
+
+    @PutMapping("editar/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public void edit(@RequestBody Disciplina disciplina, @PathVariable Long id){
+
+        service.edit(disciplina, id);
+
+    }
 }

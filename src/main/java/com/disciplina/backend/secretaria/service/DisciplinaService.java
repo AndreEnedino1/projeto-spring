@@ -30,7 +30,12 @@ public class DisciplinaService {
         return repository.findById(id);
     }
 
-
+    public Disciplina edit(Disciplina disciplina, Long id){
+        Optional<Disciplina> disciplinaToUpdate = repository.findById(id);
+        disciplinaToUpdate.ifPresent(disciplinaBanco -> disciplinaBanco.setNome(disciplina.getNome()));
+        disciplinaToUpdate.ifPresent(disciplinaBanco -> disciplinaBanco.setProfessor(disciplina.getProfessor()));
+        return repository.save(disciplinaToUpdate.get());
+    }
 
     public void delete(Long id){
         repository.deleteById(id);

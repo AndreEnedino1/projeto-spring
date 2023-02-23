@@ -23,13 +23,13 @@ export class DisciplinasService {
 
   criarEditar(disciplina:IDisciplina){
     if(disciplina.id){
+      console.log('Editando');
       return this.http.put(`${this.api}/${this.endpoint}/editar/${disciplina.id}`, disciplina);
     }
     return this.http.post(`${this.api}/${this.endpoint}`, disciplina);
   }
 
   remover(disciplina:IDisciplina){
-    console.log("Diciplina:", disciplina.id);
     return this.http.delete(`${this.api}/${this.endpoint}/delete/${disciplina.id}/`);
   }
 }

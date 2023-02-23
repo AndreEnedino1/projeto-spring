@@ -62,6 +62,7 @@ export class DisciplinasCadastrarEditarComponent implements OnInit {
   enviar(){
 
     const disciplina: IDisciplina = {
+      id: this.formDiscipina.get('id')?.value,
       nome: this.formDiscipina.get('nome')?.value,
       professor: { id: this.formDiscipina.get('idProfessor')?.value } as IProfessor
     }
